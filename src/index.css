@@ -1,6 +1,6 @@
 :root {
-  --primary: #032541;
-  --secondary: #21d07a;
+  --primary: #3f3fff;
+  --secondary: #f7ebff;
   --white: #fff;
 }
 
@@ -20,6 +20,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
+  background: url(./bg3.png);
 }
 
 .container {
@@ -62,7 +63,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #1aa762;
+  background-color: hsl(257, 25%, 33%);
   opacity: 1;
   cursor: pointer;
 }
@@ -70,6 +71,15 @@ body {
 .btn:disabled {
   pointer-events: none;
   opacity: 0.5;
+}
+
+input {
+  font-family: inherit;
+  color: #fff;
+}
+
+input::placeholder {
+  color: #fff;
 }
 
 input:focus {
@@ -172,7 +182,7 @@ header .nav-links li:last-child {
 
 .result-card .info .title {
   font-size: 1.25rem;
-  color: var(--primary);
+  color: var(--white);
   font-weight: 600;
   margin: 0;
 }
@@ -180,7 +190,7 @@ header .nav-links li:last-child {
 .result-card .info .release-date {
   font-size: 1.25rem;
   font-weight: 300;
-  color: var(--primary);
+  color: var(--white);
   margin: 0;
 }
 
@@ -211,7 +221,7 @@ header .nav-links li:last-child {
 }
 
 .movie-page .heading {
-  color: var(--primary);
+  color: var(--white);
   margin: 0;
 }
 
@@ -234,6 +244,7 @@ header .nav-links li:last-child {
   position: relative;
   border: 0;
   display: block;
+  box-shadow: 0 10px 20px rgba(247, 235, 255, 0.1);
 }
 
 .movie-card img {
@@ -278,7 +289,7 @@ header .nav-links li:last-child {
   background-color: transparent;
   border: none;
   transition: all 0.3s ease;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
   padding: 5px;
   margin: 0;
 }

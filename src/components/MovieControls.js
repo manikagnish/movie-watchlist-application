@@ -1,10 +1,9 @@
-import { FaEye, FaTimesCircle, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaTimes, FaEyeSlash } from "react-icons/fa";
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 export default function MovieControls({ movie, type }) {
   const {
-    addMovieToWatchlist,
     removeMovieFromWatchlist,
     addMovieToWatched,
     removeMovieFromWatched,
@@ -23,7 +22,7 @@ export default function MovieControls({ movie, type }) {
             className="ctrl-btn"
             onClick={() => removeMovieFromWatchlist(movie.id)}
           >
-            <FaTimesCircle />
+            <FaTimes />
           </button>
         </>
       )}
@@ -36,7 +35,7 @@ export default function MovieControls({ movie, type }) {
             className="ctrl-btn"
             onClick={() => removeMovieFromWatched(movie.id)}
           >
-            <FaTimesCircle />
+            <FaTimes />
           </button>
         </>
       )}

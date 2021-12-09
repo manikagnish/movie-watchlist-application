@@ -37,7 +37,7 @@ export default function Add() {
                 onChange={onChange}
               />
             </div>
-            {results.length > 0 && (
+            {results !== undefined && results.length > 0 && (
               <ul className="results">
                 {results.map((movie) => (
                   <li key={movie.id}>

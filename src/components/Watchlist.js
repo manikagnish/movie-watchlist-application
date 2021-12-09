@@ -12,6 +12,9 @@ export default function Watchlist() {
         <div className="container">
           <div className="header">
             <h1 className="heading">My watched list</h1>
+            <span className="count-pill">
+              {watchlist.length} {watchlist.length === 1 ? "Movie" : "Movies"}
+            </span>
           </div>
 
           {watchlist.length > 0 ? (
