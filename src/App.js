@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Add from "./components/Add";
 import Watched from "./components/Watched";
 import Watchlist from "./components/Watchlist";
-import * as icon from "react-icons/fa";
 
 function App() {
   return (
