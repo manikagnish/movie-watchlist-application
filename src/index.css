@@ -21,6 +21,7 @@ body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
   background: url(./bg3.png);
+  background-color: #111;
 }
 
 .container {
