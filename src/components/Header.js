@@ -19,7 +19,7 @@ export default function Header() {
               <Link to="/watched">Watched</Link>
             </li>
             <li>
-              <Link to="/add" className="btn">
+              <Link to="/add" className="btn btn-header">
                 + Add
               </Link>
             </li>

@@ -14,16 +14,23 @@ export default function MovieControls({ movie, type }) {
     <div className="inner-card-controls">
       {type === "watchlist" && (
         <>
-          <button className="ctrl-btn" onClick={() => addMovieToWatched(movie)}>
-            <FaEye />
-          </button>
+          <p className="ctrl-para">{movie.overview}</p>
 
-          <button
-            className="ctrl-btn"
-            onClick={() => removeMovieFromWatchlist(movie.id)}
-          >
-            <FaTimes />
-          </button>
+          <div className="ctrl-btn-container">
+            <button
+              className="ctrl-btn"
+              onClick={() => addMovieToWatched(movie)}
+            >
+              <FaEye />
+            </button>
+
+            <button
+              className="ctrl-btn"
+              onClick={() => removeMovieFromWatchlist(movie.id)}
+            >
+              <FaTimes />
+            </button>
+          </div>
         </>
       )}
       {type === "watched" && (

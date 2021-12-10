@@ -8,6 +8,7 @@ export default function Watchlist() {
   return (
     <div>
       <Header />
+
       <div className="movie-page">
         <div className="container">
           <div className="header">

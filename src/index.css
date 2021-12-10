@@ -20,7 +20,8 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
-  background-image: url(./bg7.png);
+  /* background-image: url(./bg7.png); */
+  background-color: #121212;
 }
 
 .container {
@@ -63,7 +64,8 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--white);
+  background-color: var(--primary);
+  color: var(--white);
   opacity: 1;
   cursor: pointer;
 }
@@ -71,6 +73,11 @@ body {
 .btn:disabled {
   pointer-events: none;
   opacity: 0.5;
+}
+
+.btn-header:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #3f3fff;
 }
 
 input {
@@ -225,14 +232,20 @@ header .nav-links li:last-child {
 }
 
 .movie-page .heading {
-  color: var(--primary);
+  color: var(--white);
   margin: 0;
 }
 
 .movie-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1em;
+}
+
+@media (min-width: 600px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 992px) {
@@ -244,18 +257,21 @@ header .nav-links li:last-child {
 .movie-card {
   width: 100%;
   border-radius: 5px;
+  padding: 1em;
   overflow: hidden;
   position: relative;
   border: 0;
   display: block;
+  background: hsl(0, 0%, 13%);
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .movie-card img {
   width: 100%;
-  height: 100%;
+  height: 75%;
   object-fit: cover;
   display: block;
+  border-radius: 5px;
 }
 
 .movie-card .overlay {
@@ -269,13 +285,11 @@ header .nav-links li:last-child {
 }
 
 .movie-card:hover .overlay {
-  background: rgba(0, 0, 0, 0.25);
-  /* border: 3px solid var(--secondary); */
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .movie-card .inner-card-controls {
   display: inline;
-  background-color: red;
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -284,11 +298,20 @@ header .nav-links li:last-child {
   border-radius: 5px;
   padding: 3px;
   opacity: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
   transition: all 0.3s ease;
 }
 
 .movie-card:hover .inner-card-controls {
   opacity: 1;
+}
+
+.ctrl-para {
+  color: var(--white);
+  width: 100%;
+  padding: 1em 0;
 }
 
 .ctrl-btn {
@@ -306,8 +329,28 @@ header .nav-links li:last-child {
   cursor: pointer;
 }
 
+.ctrl-btn-container {
+  margin-top: 1em;
+  border-top: 1px solid rgba(238, 238, 238, 0.2);
+}
+
 .movie-page .no-movies {
   color: #c4c4c4;
   font-size: 3rem;
   text-align: center;
+}
+
+.date {
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+.rating {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.movie-info {
+  margin-top: 1em;
 }
