@@ -20,8 +20,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
-  background: url(./bg3.png);
-  background-color: #111;
+  background-image: url(./bg7.png);
 }
 
 .container {
@@ -64,7 +63,7 @@ body {
 }
 
 .btn:hover {
-  background-color: hsl(257, 25%, 33%);
+  background-color: var(--white);
   opacity: 1;
   cursor: pointer;
 }
@@ -106,13 +105,17 @@ header a {
   transition: all 0.3s ease;
 }
 
-header a:hover {
+header li a:hover {
   opacity: 0.7;
 }
 
 header .brand a {
   font-weight: 700;
   font-size: 1.5rem;
+}
+
+.logo {
+  font-size: 2rem !important;
 }
 
 header .nav-links {
@@ -213,23 +216,23 @@ header .nav-links li:last-child {
 
 .count-pill {
   display: block;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   padding: 5px 15px;
   font-size: 1.125rem;
   font-weight: 600;
   border-radius: 999px;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .movie-page .heading {
-  color: var(--white);
+  color: var(--primary);
   margin: 0;
 }
 
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
+  gap: 1em;
 }
 
 @media (min-width: 992px) {
@@ -245,11 +248,13 @@ header .nav-links li:last-child {
   position: relative;
   border: 0;
   display: block;
-  box-shadow: 0 10px 20px rgba(247, 235, 255, 0.1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .movie-card img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 }
 
@@ -264,7 +269,8 @@ header .nav-links li:last-child {
 }
 
 .movie-card:hover .overlay {
-  border: 3px solid var(--secondary);
+  background: rgba(0, 0, 0, 0.25);
+  /* border: 3px solid var(--secondary); */
 }
 
 .movie-card .inner-card-controls {
@@ -296,7 +302,7 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn:hover {
-  color: var(--secondary);
+  color: var(--primary);
   cursor: pointer;
 }
 

@@ -6,7 +6,9 @@ export default function Header() {
       <div className="container">
         <div className="inner-content">
           <div className="brand">
-            <Link to="/">WatchList</Link>
+            <Link to="/" className="logo">
+              WatchList
+            </Link>
           </div>
 
           <ul className="nav-links">
