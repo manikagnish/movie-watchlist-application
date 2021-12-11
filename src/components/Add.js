@@ -11,7 +11,7 @@ export default function Add() {
     setQuery(e.target.value);
 
     fetch(
-      `https://movie-watchlist-application.herokuapp.com/add?query=${e.target.value}`
+      `https://movie-watchlist-application.herokuapp.com/movies?query=${e.target.value}`
     )
       .then((res) => res.json())
       .then((data) => {
