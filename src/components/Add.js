@@ -10,7 +10,9 @@ export default function Add() {
     e.preventDefault();
     setQuery(e.target.value);
 
-    fetch(`http://localhost:8000/add?query=${e.target.value}`)
+    fetch(
+      `https://movie-watchlist-application.herokuapp.com/add?query=${e.target.value}`
+    )
       .then((res) => res.json())
       .then((data) => {
         if (!data.errors) {
