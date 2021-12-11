@@ -16,7 +16,7 @@ if (process.env.NODE_ENV === "production") {
     req.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
 
-  app.get("/add", (req, res) => {
+  app.get("/movies", (req, res) => {
     const query = req.query.query;
     const movies = {
       method: "GET",
