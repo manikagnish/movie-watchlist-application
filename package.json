@@ -21,6 +21,7 @@
   "scripts": {
     "start:backend": "nodemon index.js",
     "start:frontend": "react-scripts start",
+    "start": "node app",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

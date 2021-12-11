@@ -6,6 +6,8 @@ require("dotenv").config();
 
 const app = express();
 
+const path = require("path");
+
 app.use(cors());
 
 app.get("/", (req, res) => {
@@ -36,4 +38,11 @@ app.get("/add", (req, res) => {
     });
 });
 
-app.listen(8000, () => console.log(`server is running on port ${PORT}`));
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("build"));
+  app.get("*", (req, res) => {
+    req.sendFile(path.resolve(__dirname, "build", "index.html"));
+  });
+}
+
+app.listen(PORT, () => console.log(`server is running on port ${PORT}`));
