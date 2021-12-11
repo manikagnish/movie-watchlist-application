@@ -308,6 +308,35 @@ header .nav-links li:last-child {
   opacity: 1;
 }
 
+@media (max-width: 400px) {
+  .btn {
+    padding: 7px;
+  }
+
+  header .nav-links li {
+    margin-right: 10px;
+  }
+
+  .count-pill {
+    padding: 5px 8px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .ctrl-btn-container {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .ctrl-para {
+    font-size: 1rem;
+    padding: 0;
+  }
+}
+
 .ctrl-para {
   color: var(--white);
   width: 100%;
@@ -330,7 +359,6 @@ header .nav-links li:last-child {
 }
 
 .ctrl-btn-container {
-  margin-top: 1em;
   border-top: 1px solid rgba(238, 238, 238, 0.2);
 }
 
