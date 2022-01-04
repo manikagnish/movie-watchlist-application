@@ -1,7 +1,6 @@
 import MovieControls from "./MovieControls";
 
 export default function MovieCard({ movie, type }) {
-  console.log(movie);
   return (
     <div className="movie-card">
       <div className="overlay"></div>
